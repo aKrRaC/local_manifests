@@ -22,20 +22,30 @@ repo init -u https://github.com/Project-Awaken/android_manifest -b ursa
 2. To sync source, enter
 
 ```
- repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune --retry-fetches=5 -j$(nproc --all)
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune --retry-fetches=5 -j$(nproc --all) --depth=1
 ```
 3. To make the necessary changes to build, copy the initial_setup.sh to the root of your build directory, then run
 
 ```
- ./initial_setup.sh
+./initial_setup.sh
 ```
 4. Once the source is downloaded/synced, prepare your device trees, dependencies and start the build by the following commands
 
 ```
-   source build/envsetup.sh
-   lunch awaken_zeus-ap1a-userdebug
-   make bacon -j$(nproc --all)
+source build/envsetup.sh
+lunch awaken_zeus-ap1a-userdebug
+make bacon -j$(nproc --all)
 ```
+5. For signed builds, follow the below steps after repo sync
+  
+  - On root of the build directory, execute the generate_certs.sh script to generate the certificates using the below command
+  ```
+  ./generate_certs.sh
+  ```
+  - To build and sign, execute the build_and_sign.sh script using the below command
+  ```
+  ./build_and_sign.sh
+  ```
 
 ### Compilation Help
 To get help with build errors, please visit [**Android Building Help**](https://t.me/AndroidBuildingHelp).
