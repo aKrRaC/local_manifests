@@ -18,23 +18,6 @@ changes=(
 )
 repopick -g 'https://review.lineageos.org' -P device/qcom/sepolicy_vndr/sm8450 ${changes[@]}&
 
-# hardware/xiaomi
-changes=(
-352657 # Add dummy sensors sub HAL
-352658 # sensors: Make sensor batch function virtual
-352659 # sensors: Make sensor run function virtual
-352660 # sensors: Make sensor flush function virtual
-352661 # sensors: Make sensor set mode operation function virtual
-352662 # sensors: Move one shot sensor out of main class
-352663 # sensors: Fix locking around setOperationMode and activate
-352664 # sensors: Add udfps long press sensor
-352665 # sensors: Handle fod_pressed_state without coordinates
-363160 # hidl: biometrics: fingerprint: Add enroll methods to udfps handler
-)
-repopick -g 'https://review.lineageos.org' -P hardware/xiaomi ${changes[@]}&
-
-wait
-
 # Build kernel with KernelSU from main branch
 cd kernel/xiaomi/sm8450
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
