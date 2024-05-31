@@ -12,12 +12,6 @@ changes=(
 )
 repopick -g 'https://review.lineageos.org' -P vendor/awaken ${changes[@]}&
 
-# device/qcom/sepolicy_vndr/sm8450
-changes=(
-383884 # sepolicy_vndr: update sepolicy for health HAL service
-)
-repopick -g 'https://review.lineageos.org' -P device/qcom/sepolicy_vndr/sm8450 ${changes[@]}&
-
 # Build kernel with KernelSU from main branch
 cd kernel/xiaomi/sm8450
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
