@@ -13,7 +13,7 @@
   <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-21" />
 
   <!-- Miui Camera -->
-  <project name="akrrac/android_device_xiaomi_miuicamera-zeus" path="device/xiaomi/miuicamera-zeus" remote="github" revision="14" />
+  <project name="akrrac/android_device_xiaomi_miuicamera-zeus" path="device/xiaomi/miuicamera-zeus" remote="github" revision="fourteen" />
   <project name="anush02198/android_vendor_xiaomi_miuicamera-zeus" path="vendor/xiaomi/miuicamera-zeus" remote="mainlining" revision="14-new" />
 
   <!-- Proprietary Vendor trees -->
