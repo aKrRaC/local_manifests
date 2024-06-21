@@ -4,7 +4,7 @@
 source build/envsetup.sh
 
 # Select the build configuration
-lunch blaze_zeus-user
+lunch blaze_dagda-user
 
 # Build the target files package and otatools
 m target-files-package otatools
