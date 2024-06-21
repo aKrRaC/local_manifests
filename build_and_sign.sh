@@ -4,7 +4,7 @@
 source build/envsetup.sh
 
 # Select the build configuration
-lunch awaken_zeus-ap1a-user
+lunch awaken_dagda-ap1a-user
 
 # Build the target files package and otatools
 m target-files-package otatools

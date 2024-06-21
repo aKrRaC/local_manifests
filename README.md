@@ -33,7 +33,7 @@ repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune 
 
 ```
 source build/envsetup.sh
-lunch awaken_zeus-ap1a-userdebug
+lunch awaken_dagda-ap1a-userdebug
 make bacon -j$(nproc --all)
 ```
 5. For signed builds, follow the below steps after repo sync
